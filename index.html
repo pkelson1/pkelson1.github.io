@@ -12,67 +12,72 @@
             --soft-grey: #f8f9fa;
         }
 
-        body { 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; 
-            color: var(--charcoal);
-            background-color: var(--white);
-        }
+        body, html { margin: 0; padding: 0; font-family: 'Inter', sans-serif; color: var(--charcoal); scroll-behavior: smooth; }
 
-        /* Navigation - Fixed Purple and Centered */
+        /* Navigation */
         nav { 
             background: var(--charcoal); 
-            padding: 1.5rem; 
+            padding: 1.2rem; 
             text-align: center; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        nav a { 
-            color: white !important; /* Forces color to stay white */
-            text-decoration: none; 
-            margin: 0 20px; 
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-        nav a:visited { color: white !important; } /* Prevents the "ugly purple" */
+        nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
+        nav a:hover { color: #40916c !important; }
+        nav a:visited { color: white !important; }
 
-        /* Hero Section */
-        .hero-section {
-            height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            /* Update the filename here if needed */
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/chapel drone.webp') no-repeat center center/cover;
+        /* Parallax Background */
+        .parallax-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/chapel drone.webp');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
         }
 
-        h1 { font-family: 'Georgia', serif; font-size: 3.5rem; margin: 0; }
+        /* Content Layer */
+        .content-layer {
+            background: var(--white);
+            position: relative;
+            z-index: 1;
+            margin-top: -30vh;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            border-top: 8px solid var(--forest-green);
+            box-shadow: 0px -10px 30px rgba(0,0,0,0.2);
+        }
 
-        /* About Section - Fixed Headshot Size */
-        .container { max-width: 900px; margin: auto; padding: 60px 20px; }
+        .container { max-width: 900px; margin: auto; padding: 0 20px; }
         
+        .hero-text-area { text-align: center; margin-bottom: 80px; }
+        .hero-text-area h1 { font-family: 'Georgia', serif; font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; color: var(--charcoal); }
+        .hero-text-area p { text-transform: uppercase; letter-spacing: 4px; font-weight: bold; color: var(--forest-green); margin-top: 10px; }
+
         .about-grid {
             display: grid;
-            grid-template-columns: 300px 1fr; /* Forces image column to be 300px */
-            gap: 40px;
-            align-items: center;
+            grid-template-columns: 300px 1fr;
+            gap: 60px;
+            align-items: start;
         }
 
         .headshot {
-            width: 100%; /* Fills the 300px column */
+            width: 100%;
             max-width: 300px;
-            height: auto;
             border-radius: 12px;
-            border: 5px solid var(--forest-green); /* The green you wanted */
-            box-shadow: 10px 10px 0px rgba(27, 67, 50, 0.2);
+            border: 4px solid var(--forest-green);
+            box-shadow: 15px 15px 0px var(--soft-grey);
         }
 
-        .about-text h2 { font-family: 'Georgia', serif; color: var(--forest-green); }
+        .about-text h2 { font-family: 'Georgia', serif; font-size: 2.2rem; margin-top: 0; color: var(--forest-green); }
+        .about-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
 
         @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr; text-align: center; }
-            .headshot { margin: 0 auto; }
+            .content-layer { margin-top: -20vh; }
+            .headshot { margin: 0 auto 30px; }
         }
     </style>
 </head>
@@ -84,21 +89,25 @@
     <a href="contact.html">CONTACT</a>
 </nav>
 
-<header class="hero-section">
-    <div class="hero-content">
-        <h1>Parker Kelson</h1>
-        <p style="letter-spacing: 2px; text-transform: uppercase;">Digital Marketer | Visual Storyteller</p>
-    </div>
-</header>
+<div class="parallax-bg"></div>
 
-<div class="container">
-    <div class="about-grid">
-        <div class="about-image">
-            <img src="images/me.webp" alt="Headshot" class="headshot">
+<div class="content-layer">
+    <div class="container">
+        
+        <div class="hero-text-area">
+            <h1>Parker Kelson</h1>
+            <p>Digital Marketer | Visual Storyteller</p>
         </div>
-        <div class="about-text">
-            <h2>Bridging Creative Vision & Institutional Strategy</h2>
-            <p>I am a Digital Marketer specializing in Higher Education. By combining professional drone photography with data-driven social strategy, I help institutions turn campus moments into community-building narratives.</p>
+
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="images/me.webp" alt="Parker Kelson Headshot" class="headshot">
+            </div>
+            <div class="about-text">
+                <h2>Bridging Creative Vision & Strategy</h2>
+                <p>I am a Digital Marketer specializing in the unique landscape of Higher Education. By combining professional drone photography and cinematic video with data-driven social strategy, I help institutions turn campus moments into community-building narratives.</p>
+                <p>Currently focused on my final year at Valparaiso University, I leverage interactive content to drive authentic engagement and showcase the unique spirit of the campus community.</p>
+            </div>
         </div>
     </div>
 </div>
