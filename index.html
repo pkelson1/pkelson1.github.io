@@ -7,51 +7,69 @@
     <style>
         <style>
     :root {
-        --charcoal: #333333;
-        --forest-green: #2D5A27; /* Tasteful accent */
-        --light-grey: #F5F5F5;
-        --white: #FFFFFF;
+        --charcoal: #2d2d2d;
+        --forest-green: #1b4332; /* Deep, professional green */
+        --accent-green: #40916c; /* Lighter green for hovers */
+        --soft-grey: #f8f9fa;
+        --white: #ffffff;
     }
+
     body { 
-        font-family: 'Inter', sans-serif; 
+        font-family: 'Inter', -apple-system, sans-serif; 
         color: var(--charcoal); 
-        line-height: 1.6; 
+        line-height: 1.8; 
         margin: 0; 
         background: var(--white);
     }
-    h1, h2, h3 { 
-        font-family: 'Georgia', serif; 
-        color: var(--charcoal); 
-    }
+
+    h1, h2, h3 { font-family: 'Georgia', serif; font-weight: 700; }
+
+    /* Sticky Nav */
     nav { 
-        background: var(--charcoal); 
-        padding: 1rem; 
+        background: var(--white); 
+        padding: 1.2rem; 
         text-align: center; 
+        position: sticky; 
+        top: 0; 
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
+
     nav a { 
-        color: var(--white); 
+        color: var(--charcoal); 
         text-decoration: none; 
-        margin: 0 15px; 
-        font-weight: bold; 
-        font-size: 0.9rem;
+        margin: 0 20px; 
+        font-weight: 600; 
+        letter-spacing: 1px;
+        font-size: 0.85rem;
+        transition: 0.3s;
     }
+
     nav a:hover { color: var(--forest-green); }
+
     .hero { 
-        padding: 80px 20px; 
+        padding: 120px 20px; 
         text-align: center; 
-        background: var(--light-grey); 
-        border-bottom: 4px solid var(--forest-green);
+        background: var(--soft-grey); 
+        border-bottom: 6px solid var(--forest-green);
     }
+
     .btn {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 12px 30px;
         background: var(--forest-green);
         color: white;
         text-decoration: none;
-        border-radius: 5px;
-        margin-top: 20px;
+        border-radius: 4px;
+        margin-top: 25px;
+        transition: background 0.3s ease;
     }
-    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+
+    .btn:hover { background: var(--accent-green); }
+
+    .container { max-width: 800px; margin: auto; padding: 60px 20px; }
+</style>
+
 </style>
 
     </style>
