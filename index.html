@@ -5,42 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parker Kelson | Higher-Ed Digital Marketer</title>
     <style>
-        body { font-family: 'Georgia', sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 2rem; text-align: center; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        .project-card { background: white; margin-bottom: 30px; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #2c3e50; }
-        .metrics { font-style: italic; color: #7f8c8d; border-left: 3px solid #3498db; padding-left: 10px; }
+        <style>
+    :root {
+        --charcoal: #333333;
+        --forest-green: #2D5A27; /* Tasteful accent */
+        --light-grey: #F5F5F5;
+        --white: #FFFFFF;
+    }
+    body { 
+        font-family: 'Inter', sans-serif; 
+        color: var(--charcoal); 
+        line-height: 1.6; 
+        margin: 0; 
+        background: var(--white);
+    }
+    h1, h2, h3 { 
+        font-family: 'Georgia', serif; 
+        color: var(--charcoal); 
+    }
+    nav { 
+        background: var(--charcoal); 
+        padding: 1rem; 
+        text-align: center; 
+    }
+    nav a { 
+        color: var(--white); 
+        text-decoration: none; 
+        margin: 0 15px; 
+        font-weight: bold; 
+        font-size: 0.9rem;
+    }
+    nav a:hover { color: var(--forest-green); }
+    .hero { 
+        padding: 80px 20px; 
+        text-align: center; 
+        background: var(--light-grey); 
+        border-bottom: 4px solid var(--forest-green);
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: var(--forest-green);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .container { max-width: 900px; margin: auto; padding: 40px 20px; }
+</style>
+
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Your Name</h1>
-    <p>Digital Marketing & Social Media Management | Higher Education</p>
-</header>
-
-<div class="container">
-    <section id="projects">
-        <h2>Strategic Case Studies</h2>
-        
-        <div class="project-card">
-            <h3>Homecoming Community Engagement</h3>
-            <p><strong>Strategy:</strong> Crowdsourced student traditions via Instagram Story stickers to create a community-led carousel.</p>
-            <p class="metrics">Result: Top performing post of the cycle (Engagement focus).</p>
-        </div>
-
-        <div class="project-card">
-            <h3>The Sound of Campus: Campanile Audio Reel</h3>
-            <p><strong>Strategy:</strong> Leveraged auditory branding to increase emotional connection with alumni and current students.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>The "Perfect Day" Visual Narrative</h3>
-            <p><strong>Strategy:</strong> Converted a viral trend into a lifestyle roadmap for prospective students.</p>
-        </div>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="contact.html">CONTACT</a>
+    </nav>
+    
+    <section class="hero">
+        <h1>Your Name</h1>
+        <p>Digital Marketer | Social Media Strategist | Photographer</p>
+        <a href="portfolio.html" class="btn">View My Work</a>
     </section>
-</div>
+    
+    <div class="container">
+        <h2>Welcome</h2>
+        <p>
+            I specialize in bridging the gap between creative visual storytelling and strategic higher-ed communication. 
+            With a background in photography and real-time social media management, I create content that drives 
+            engagement and builds community.
+        </p>
+        <p>
+            <strong>Currently Seeking:</strong> Opportunities in Higher Education marketing where I can leverage 
+            data-driven social strategies to showcase campus life and institutional mission.
+        </p>
+    </div>
+
+</body>
+
+
 
 </body>
 </html>
