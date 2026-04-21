@@ -9,12 +9,10 @@
             --charcoal: #2d2d2d;
             --forest-green: #1b4332;
             --white: #ffffff;
-            --soft-grey: #f8f9fa;
         }
 
-        body, html { margin: 0; padding: 0; font-family: 'Inter', sans-serif; color: var(--charcoal); scroll-behavior: smooth; }
+        body, html { margin: 0; padding: 0; font-family: 'Inter', sans-serif; color: var(--charcoal); }
 
-        /* Navigation */
         nav { 
             background: var(--charcoal); 
             padding: 1.2rem; 
@@ -23,44 +21,57 @@
             top: 0;
             z-index: 1000;
         }
-        nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; transition: 0.3s; }
-        nav a:hover { color: #40916c !important; }
-        nav a:visited { color: white !important; }
+        nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
 
-        /* Parallax Background */
+        /* Background Area */
         .parallax-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/chapel drone.webp');
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('images/chapel drone.webp');
             height: 100vh;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Content Layer */
+        /* Your Name - Now sitting ON the image but will scroll with the page */
+        .hero-title {
+            color: white;
+            text-align: center;
+            z-index: 2;
+        }
+        .hero-title h1 { 
+            font-family: 'Georgia', serif; 
+            font-size: clamp(3rem, 10vw, 5.5rem); 
+            margin: 0; 
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+        }
+        .hero-title p { 
+            text-transform: uppercase; 
+            letter-spacing: 5px; 
+            font-weight: bold; 
+            margin-top: 10px;
+        }
+
+        /* The Content Layer */
         .content-layer {
             background: var(--white);
             position: relative;
-            z-index: 1;
-            margin-top: -30vh;
-            padding-top: 80px;
-            padding-bottom: 80px;
+            z-index: 3;
+            padding: 80px 0;
             border-top: 8px solid var(--forest-green);
-            box-shadow: 0px -10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0px -20px 40px rgba(0,0,0,0.3);
         }
 
         .container { max-width: 900px; margin: auto; padding: 0 20px; }
         
-        .hero-text-area { text-align: center; margin-bottom: 80px; }
-        .hero-text-area h1 { font-family: 'Georgia', serif; font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; color: var(--charcoal); }
-        .hero-text-area p { text-transform: uppercase; letter-spacing: 4px; font-weight: bold; color: var(--forest-green); margin-top: 10px; }
-
         .about-grid {
             display: grid;
             grid-template-columns: 300px 1fr;
             gap: 60px;
-            align-items: start;
+            align-items: center;
         }
 
         .headshot {
@@ -68,15 +79,12 @@
             max-width: 300px;
             border-radius: 12px;
             border: 4px solid var(--forest-green);
-            box-shadow: 15px 15px 0px var(--soft-grey);
         }
 
-        .about-text h2 { font-family: 'Georgia', serif; font-size: 2.2rem; margin-top: 0; color: var(--forest-green); }
-        .about-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; }
+        .about-text h2 { font-family: 'Georgia', serif; font-size: 2.2rem; color: var(--forest-green); margin-top: 0; }
 
         @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr; text-align: center; }
-            .content-layer { margin-top: -20vh; }
             .headshot { margin: 0 auto 30px; }
         }
     </style>
@@ -89,19 +97,18 @@
     <a href="contact.html">CONTACT</a>
 </nav>
 
-<div class="parallax-bg"></div>
+<div class="parallax-bg">
+    <div class="hero-title">
+        <h1>Parker Kelson</h1>
+        <p>Digital Marketer | Visual Storyteller</p>
+    </div>
+</div>
 
 <div class="content-layer">
     <div class="container">
-        
-        <div class="hero-text-area">
-            <h1>Parker Kelson</h1>
-            <p>Digital Marketer | Visual Storyteller</p>
-        </div>
-
         <div class="about-grid">
             <div class="about-image">
-                <img src="images/me.webp" alt="Parker Kelson Headshot" class="headshot">
+                <img src="images/me.webp" alt="Parker Kelson" class="headshot">
             </div>
             <div class="about-text">
                 <h2>Bridging Creative Vision & Strategy</h2>
