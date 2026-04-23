@@ -73,26 +73,31 @@
             gap: 60px;
             align-items: center;
         }
-
-            /* 1. This fixes the gap by using a shadow instead of a border */
+    /* 1. Bulletproof Frame Fix */
     .headshot {
         width: 100%;
         max-width: 300px;
         border-radius: 12px;
-        box-shadow: 0 0 0 4px var(--forest-green), 15px 15px 0px var(--soft-grey);
+        /* This creates a solid 4px 'frame' that follows the curve perfectly */
+        outline: 4px solid var(--forest-green);
+        outline-offset: -4px; /* This pulls the outline inside to prevent gaps */
+        box-shadow: 15px 15px 0px var(--soft-grey);
         display: block;
     }
 
-    /* 2. Paste this below your headshot styles */
+    /* 2. Force Center the Button */
     .cta-container {
-        text-align: center;
-        margin-top: 60px;
-        padding-bottom: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center; /* Horizontally centers the button */
+        margin-top: 80px;
+        padding-bottom: 60px;
+        clear: both; /* Prevents previous elements from pushing it sideways */
     }
 
     .contact-btn {
         display: inline-block;
-        padding: 15px 35px;
+        padding: 18px 40px;
         background-color: var(--forest-green);
         color: white !important;
         text-decoration: none;
@@ -100,16 +105,17 @@
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
         border: 2px solid var(--forest-green);
     }
 
     .contact-btn:hover {
-        background-color: transparent;
+        background-color: white;
         color: var(--forest-green) !important;
-        transform: scale(1.05);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     }
-
+           
 
         .about-text h2 { font-family: 'Georgia', serif; font-size: 2.2rem; color: var(--forest-green); margin-top: 0; }
 
@@ -152,7 +158,7 @@
         </div>
 
         <div class="pillars-header">
-            <h3>Strategic Pillars</h3>
+            
         </div>
         <div class="pillars-grid">
             <div class="pillar-card">
