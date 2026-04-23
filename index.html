@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parker Kelson | Higher-Ed Marketer</title>
+    <title>Parker Kelson | Digital Storyteller</title>
     <style>
         :root {
             --charcoal: #2d2d2d;
@@ -74,12 +74,42 @@
             align-items: center;
         }
 
-        .headshot {
-            width: 100%;
-            max-width: 300px;
-            border-radius: 12px;
-            border: 4px solid var(--forest-green);
-        }
+            /* 1. This fixes the gap by using a shadow instead of a border */
+    .headshot {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+        box-shadow: 0 0 0 4px var(--forest-green), 15px 15px 0px var(--soft-grey);
+        display: block;
+    }
+
+    /* 2. Paste this below your headshot styles */
+    .cta-container {
+        text-align: center;
+        margin-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .contact-btn {
+        display: inline-block;
+        padding: 15px 35px;
+        background-color: var(--forest-green);
+        color: white !important;
+        text-decoration: none;
+        border-radius: 50px; 
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        border: 2px solid var(--forest-green);
+    }
+
+    .contact-btn:hover {
+        background-color: transparent;
+        color: var(--forest-green) !important;
+        transform: scale(1.05);
+    }
+
 
         .about-text h2 { font-family: 'Georgia', serif; font-size: 2.2rem; color: var(--forest-green); margin-top: 0; }
 
@@ -140,6 +170,9 @@
                 <h4>Cultural Storytelling</h4>
                 <p>Leveraging a fresh, post-grad perspective to translate complex institutional values into a vibrant, student-centered narrative.</p>
             </div>
+            <div class="cta-container">
+            <a href="contact.html" class="contact-btn">Get In Touch</a>
+        </div>
         </div>
     </div>
 </div>
