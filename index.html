@@ -85,19 +85,17 @@
         display: block;
     }
 
-    /* 2. Force Center the Button */
     .cta-container {
+        display: block; /* Switch from flex to block */
+        text-align: center; /* This centers inline-block elements */
         width: 100%;
-        display: flex;
-        justify-content: center; /* Horizontally centers the button */
-        margin-top: 80px;
-        padding-bottom: 60px;
-        clear: both; /* Prevents previous elements from pushing it sideways */
+        margin: 80px auto 60px auto; /* Centers the container itself */
+        clear: both; /* Breaks away from any grids above it */
     }
 
     .contact-btn {
-        display: inline-block;
-        padding: 18px 40px;
+        display: inline-block; /* Essential for text-align: center to work */
+        padding: 18px 45px;
         background-color: var(--forest-green);
         color: white !important;
         text-decoration: none;
@@ -105,17 +103,17 @@
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
-        transition: 0.3s ease-in-out;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Fun "pop" effect */
         border: 2px solid var(--forest-green);
     }
 
     .contact-btn:hover {
-        background-color: white;
-        color: var(--forest-green) !important;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        background-color: var(--charcoal); /* Matches your nav for consistency */
+        border-color: var(--charcoal);
+        color: white !important;
+        transform: scale(1.05);
     }
-           
+       
 
         .about-text h2 { font-family: 'Georgia', serif; font-size: 2.2rem; color: var(--forest-green); margin-top: 0; }
 
