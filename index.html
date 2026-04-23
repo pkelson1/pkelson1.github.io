@@ -115,13 +115,63 @@
                 <img src="images/me.webp" alt="Parker Kelson" class="headshot">
             </div>
             <div class="about-text">
-                <h2>Bridging Creative Vision & Strategy</h2>
-                <p>I am a Digital Marketer specializing in the unique landscape of Higher Education. By combining professional drone photography and cinematic video with data-driven social strategy, I help institutions turn campus moments into community-building narratives.</p>
-                <p>Currently focused on my final year at Valparaiso University, I leverage interactive content to drive authentic engagement and showcase the unique spirit of the campus community.</p>
+                <h2>The Student-First Perspective</h2>
+                <p>I am a Digital Marketer and Photographer specializing in authentic storytelling for Higher Education. My philosophy is built on the power of <strong>User-Generated Content (UGC)</strong>—creating a relatable digital presence that connects with students on their level.</p>
+                <p>Having recently spent four years immersed in the college environment, I bring a unique mindset that allows me to showcase a university's culture from the inside out. I measure success not just in metrics, but in how content sparks real conversation within the campus community.</p>
+            </div>
+        </div>
+
+        <div class="pillars-header">
+            <h3>Strategic Pillars</h3>
+        </div>
+        <div class="pillars-grid">
+            <div class="pillar-card">
+                <div class="pillar-icon">📱</div>
+                <h4>Authentic Engagement</h4>
+                <p>Prioritizing UGC and 'casual' content that builds genuine trust with current and prospective students over traditional corporate advertising.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🎨</div>
+                <h4>Strategic Content</h4>
+                <p>Transforming everyday campus moments into high-performing Reels and photography designed to showcase authentic campus culture.</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">🏛️</div>
+                <h4>Cultural Storytelling</h4>
+                <p>Leveraging a fresh, post-grad perspective to translate complex institutional values into a vibrant, student-centered narrative.</p>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    /* Add these styles to your existing <style> block */
+    .pillars-header { text-align: center; margin-top: 80px; margin-bottom: 40px; }
+    .pillars-header h3 { font-family: 'Georgia', serif; font-size: 2rem; color: var(--forest-green); text-transform: uppercase; letter-spacing: 2px; }
+
+    .pillars-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        text-align: center;
+    }
+
+    .pillar-card {
+        padding: 30px;
+        background: var(--soft-grey);
+        border-radius: 12px;
+        transition: 0.3s;
+    }
+    .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    
+    .pillar-icon { font-size: 2.5rem; margin-bottom: 15px; }
+    .pillar-card h4 { font-family: 'Georgia', serif; color: var(--forest-green); margin-bottom: 15px; font-size: 1.3rem; }
+    .pillar-card p { font-size: 0.95rem; line-height: 1.6; color: #555; }
+
+    @media (max-width: 768px) {
+        .pillars-grid { grid-template-columns: 1fr; }
+    }
+</style>
 
 </body>
 </html>
