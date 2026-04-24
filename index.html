@@ -84,14 +84,15 @@
         box-shadow: 15px 15px 0px var(--soft-grey);
         display: block;
     }
-
-    .full-width-cta {
+       .full-width-cta {
         width: 100%;
+        display: flex;
+        justify-content: center; /* Horizontally center everything inside */
+        align-items: center;
+        padding: 80px 0;
         background-color: var(--white);
-        padding: 80px 0; /* Gives it plenty of breathing room */
-        text-align: center;
-        border-top: 1px solid #eee; /* Subtle separator line */
-        clear: both; /* Ensures no previous elements can wrap around it */
+        clear: both;
+        border-top: 1px solid #eee;
     }
 
     .contact-btn {
@@ -106,12 +107,15 @@
         letter-spacing: 2px;
         transition: 0.3s ease;
         border: 2px solid var(--forest-green);
+        /* The secret sauce to force centering in stubborn containers */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .contact-btn:hover {
-        background-color: white;
-        color: var(--forest-green) !important;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        background-color: var(--charcoal);
+        color: white !important;
+        transform: scale(1.05);
     }
 
        
@@ -175,9 +179,10 @@
                 <h4>Cultural Storytelling</h4>
                 <p>Leveraging a fresh, post-grad perspective to translate complex institutional values into a vibrant, student-centered narrative.</p>
             </div>
-            <div class="full-width-cta">
-            <a href="contact.html" class="contact-btn">Get In Touch</a>
-        </div>
+           <section class="full-width-cta">
+    <a href="contact.html" class="contact-btn">Get In Touch</a>
+</section>
+
         </div>
     </div>
 </div>
