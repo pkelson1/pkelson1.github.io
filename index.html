@@ -195,23 +195,18 @@
         </div>
        
     </div>
+    
     <section class="full-width-cta">
     <a href="contact.html" class="contact-btn">Get In Touch</a>
 </section>
 
-</div>
-    <footer>
+<footer>
     &copy; <span id="year"></span> Parker Kelson. All Rights Reserved.
 </footer>
 
-<script>
-    // Automatically updates the year to 2026 (or whatever the current year is)
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-
 <style>
-    /* Add these styles to your existing <style> block */
+    /* ... your existing pillar styles are here ... */
+     /* Add these styles to your existing <style> block */
     .pillars-header { text-align: center; margin-top: 80px; margin-bottom: 40px; }
     .pillars-header h3 { font-family: 'Georgia', serif; font-size: 2rem; color: var(--forest-green); text-transform: uppercase; letter-spacing: 2px; }
 
@@ -237,7 +232,22 @@
     @media (max-width: 768px) {
         .pillars-grid { grid-template-columns: 1fr; }
     }
+
+    footer {
+        background-color: #f9f9f9;
+        padding: 25px 0;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #888;
+        border-top: 1px solid #eee;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
 </style>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
