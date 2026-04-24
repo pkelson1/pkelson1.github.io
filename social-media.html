@@ -5,26 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media | Parker Kelson</title>
     <style>
-        /* Re-use your :root and nav styles from index.html */
-        
-        .sub-page-hero {
-            height: 40vh;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+        :root {
+            --charcoal: #2d2d2d;
+            --forest-green: #1b4332;
+            --white: #ffffff;
+            --soft-grey: #f4f4f4;
         }
-        
-        .back-link {
-            display: inline-block;
-            margin: 20px;
-            text-decoration: none;
-            color: var(--forest-green);
-            font-weight: bold;
+
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: var(--white); }
+
+        nav { background: var(--charcoal); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+
+        .back-link { display: inline-block; margin: 30px; text-decoration: none; color: var(--forest-green); font-weight: bold; font-size: 0.9rem; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        .page-header { text-align: center; margin-bottom: 60px; }
+        .page-header h1 { font-family: 'Georgia', serif; font-size: 3rem; color: var(--forest-green); margin-bottom: 10px; }
+        .page-header p { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: #666; }
+
+        /* Masonry Grid Logic */
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 20px;
         }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: 0.3s ease;
+        }
+
+        .masonry-item:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+
+        .masonry-image-wrapper { position: relative; overflow: hidden; }
+        .masonry-image-wrapper img { width: 100%; display: block; transition: 0.5s; }
+        
+        .masonry-hover {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(27, 67, 50, 0.85); /* Forest Green Overlay */
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: 0.3s;
+        }
+
+        .masonry-item:hover .masonry-hover { opacity: 1; }
+        .masonry-hover span { color: white; font-weight: bold; border: 2px solid white; padding: 10px 20px; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; }
+
+        .item-info { padding: 15px; }
+        .item-info h3 { margin: 0; font-family: 'Georgia', serif; font-size: 1.1rem; color: var(--forest-green); }
+        .item-info p { margin: 5px 0 0; font-size: 0.85rem; color: #777; line-height: 1.4; }
+
+        @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+        @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
     </style>
 </head>
 <body>
@@ -35,12 +72,31 @@
     <a href="contact.html">CONTACT</a>
 </nav>
 
-<a href="portfolio.html" class="back-link">← Back to Portfolio</a>
+<a href="portfolio.html" class="back-link">← BACK TO HUB</a>
 
-<header class="sub-page-hero" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/photo-hero.webp');">
-    <h1>Social Media</h1>
-</header>
+<div class="container">
+    <header class="page-header">
+        <h1>Digital Storytelling</h1>
+        <p>Short-form video & Strategic Engagement</p>
+    </header>
+
+    <div class="masonry-grid">
+        
+        <div class="masonry-item">
+            <a href="https://www.instagram.com/reel/DW5XSe6kU3m/" target="_blank">
+                <div class="masonry-image-wrapper">
+                    <img src="images/social/post1.webp" alt="Social Content">
+                    <div class="masonry-hover"><span>View on Instagram</span></div>
+                </div>
+            </a>
+            <div class="item-info">
+                <h3>Campus Spirit</h3>
+                <p>UGC-style Reel showcasing authentic campus culture and engagement.</p>
+            </div>
+        </div>
+
+        </div>
+</div>
 
 </body>
 </html>
-
