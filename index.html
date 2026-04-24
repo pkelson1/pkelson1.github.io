@@ -130,6 +130,18 @@
 }
     
         }
+
+            footer {
+        background-color: #f9f9f9;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #888;
+        border-top: 1px solid #eee;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
     </style>
 </head>
 <body>
@@ -188,6 +200,15 @@
 </section>
 
 </div>
+    <footer>
+    &copy; <span id="year"></span> Parker Kelson. All Rights Reserved.
+</footer>
+
+<script>
+    // Automatically updates the year to 2026 (or whatever the current year is)
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
 <style>
     /* Add these styles to your existing <style> block */
