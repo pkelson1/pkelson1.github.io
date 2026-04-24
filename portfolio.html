@@ -66,30 +66,54 @@
     <a href="contact.html">CONTACT</a>
 </nav>
 
-<header class="portfolio-header">
-    <h1>Creative Portfolio</h1>
-    <p>Strategic Content & Visual Storytelling</p>
-</header>
+<div class="hub-wrapper">
+    <a href="#social-section" class="hub-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/social-hero.webp'); background-size: cover;">
+        <div class="hub-content">
+            <h2>Social Media</h2>
+            <p>UGC & STRATEGIC CONTENT</p>
+        </div>
+    </a>
 
-<div class="portfolio-container">
-    <div class="work-item">
-        <div style="padding: 100px 20px; text-align: center; background: #eee;">
-            [First Reel Coming Soon]
+    <a href="#photo-section" class="hub-card photography-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/photo-hero.webp'); background-size: cover;">
+        <div class="hub-content">
+            <h2>Visual Arts</h2>
+            <p>PHOTOGRAPHY & AERIAL ASSETS</p>
         </div>
-        <div class="work-info">
-            <h3>Social Engagement</h3>
-            <p>Valparaiso University Homecoming Reel Strategy</p>
-        </div>
-    </div>
+    </a>
 </div>
 
-<footer>
-    &copy; <span id="year"></span> Parker Kelson. All Rights Reserved.
-</footer>
+<div id="social-section" class="container">
+    <div class="section-title">
+        <h2>Social Media Content</h2>
+        <p>A collection of high-engagement Reels and UGC strategy created for Valparaiso University.</p>
+    </div>
+    
+    <div class="masonry-grid">
+        </div>
+</div>
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+<style>
+    .section-title { text-align: center; margin: 80px 0 40px; }
+    .section-title h2 { font-family: 'Georgia', serif; font-size: 2.5rem; color: var(--forest-green); }
+
+    .masonry-grid {
+        column-count: 3;
+        column-gap: 20px;
+        padding: 0 20px;
+    }
+
+    @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
+    @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+
+    /* For photography sub-sections later */
+    .photo-gallery-links {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+    }
+</style>
+
 
 </body>
 </html>
