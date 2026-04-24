@@ -105,10 +105,16 @@
 </footer>
 
 <script async src="//www.instagram.com/embed.js"></script>
-
 <script>
+    // This forces Instagram to "re-scan" the page if it missed the posts the first time
+    window.onload = function() {
+        if (window.instgrm) {
+            window.instgrm.Embeds.process();
+        }
+    };
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 
 </body>
 </html>
