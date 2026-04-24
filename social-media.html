@@ -13,8 +13,24 @@
 
         body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #fdfdfd; }
 
-        nav { background: var(--charcoal); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
+        nav { 
+            background: var(--charcoal); 
+            padding: 1.5rem 0; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        
+        nav a { 
+            color: white !important; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.8rem; 
+            letter-spacing: 2px;
+        }
 
         .back-link { display: inline-block; margin: 30px; text-decoration: none; color: var(--forest-green); font-weight: bold; font-size: 0.9rem; }
 
@@ -22,53 +38,50 @@
         .page-header h1 { font-family: 'Georgia', serif; font-size: 3rem; color: var(--forest-green); margin-bottom: 10px; }
         .page-header p { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: #666; }
 
-        /* The Live Feed Grid */
         .embed-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
             padding: 20px;
             max-width: 1400px;
             margin: 0 auto;
         }
 
-        .embed-card {
+        .embed-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
             width: 100%;
-            max-width: 350px; /* Perfect size for Reels/Posts */
-            min-height: 500px; /* Prevents layout jump while loading */
+            flex-wrap: wrap;
         }
 
-        /* Footer to match your homepage */
-        footer { background: #f9f9f9; padding: 25px 0; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; margin-top: 60px; }
+        .centered-row {
+            max-width: 800px; 
+            margin: 0 auto;
+        }
 
-            .embed-container {
-        display: flex;
-        flex-direction: column; /* Stack the rows vertically */
-        align-items: center;
-        gap: 20px;
-    }
+        .embed-card {
+            width: 100%;
+            max-width: 350px;
+            min-height: 500px;
+        }
 
-    .embed-row {
-        display: flex;
-        justify-content: center; /* Centers the items in the row */
-        gap: 20px;
-        width: 100%;
-        flex-wrap: wrap;
-    }
+        footer { 
+            background: #f9f9f9; 
+            padding: 25px 0; 
+            text-align: center; 
+            font-size: 0.8rem; 
+            color: #888; 
+            border-top: 1px solid #eee; 
+            margin-top: 60px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .centered-row {
-        /* This ensures that when there are only 2, they sit in the 'gaps' of the 3 above */
-        max-width: 800px; /* Adjust this to be roughly the width of 2.5 cards */
-        margin: 0 auto;
-    }
-
-    .embed-card {
-        width: 100%;
-        max-width: 350px;
-        min-height: 500px;
-    }
-
+        @media (max-width: 1100px) {
+            .embed-row { flex-direction: column; align-items: center; }
+        }
     </style>
 </head>
 <body>
@@ -79,7 +92,7 @@
     <a href="contact.html">CONTACT</a>
 </nav>
 
-<a href="portfolio.html" class="back-link">← BACK</a>
+<a href="portfolio.html" class="back-link">← BACK TO HUB</a>
 
 <header class="page-header">
     <h1>Digital Storytelling</h1>
@@ -87,44 +100,49 @@
 </header>
 
 <div class="embed-container">
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQexoALjSo7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQkAF5ICVZG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRVDXazj2_p/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSL77jlDbKO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSp4C1ljSr9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS6O8SVjavo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT6q40YDaMt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUt7HkWDect/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
-    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUy92cnDXla/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-row">
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQexoALjSo7/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQkAF5ICVZG/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRVDXazj2_p/" data-instgrm-version="14"></blockquote></div>
+    </div>
 
     <div class="embed-row">
-        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DU_8ZYnjcFj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
-        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVmuepnDPFD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
-        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVr-DOXjO24/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSL77jlDbKO/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSp4C1ljSr9/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS6O8SVjavo/" data-instgrm-version="14"></blockquote></div>
+    </div>
+
+    <div class="embed-row">
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT6q40YDaMt/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUt7HkWDect/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUy92cnDXla/" data-instgrm-version="14"></blockquote></div>
+    </div>
+
+    <div class="embed-row">
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DU_8ZYnjcFj/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVmuepnDPFD/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVr-DOXjO24/" data-instgrm-version="14"></blockquote></div>
     </div>
 
     <div class="embed-row centered-row">
-        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW4-DrWhr7x/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
-        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW5XSe6kU3m/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW4-DrWhr7x/" data-instgrm-version="14"></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW5XSe6kU3m/" data-instgrm-version="14"></blockquote></div>
     </div>
-
 </div>
+
+<footer>
+    &copy; <span id="year"></span> Parker Kelson. All Rights Reserved.
+</footer>
 
 <script async src="//www.instagram.com/embed.js"></script>
 <script>
-    // Force Instagram to process the embeds even on a slow connection
     window.onload = function() {
         if (window.instgrm) {
             window.instgrm.Embeds.process();
         }
+        document.getElementById("year").textContent = new Date().getFullYear();
     };
-    // Ensure this script also runs the year update
-    document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
-
 
 </body>
 </html>
