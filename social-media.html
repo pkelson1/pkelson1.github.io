@@ -80,22 +80,41 @@
         <p>Short-form video & Strategic Engagement</p>
     </header>
 
-    <div class="masonry-grid">
-        
-        <div class="masonry-item">
-            <a href="https://www.instagram.com/reel/DW5XSe6kU3m/" target="_blank">
-                <div class="masonry-image-wrapper">
-                    <img src="images/social/post1.webp" alt="Social Content">
-                    <div class="masonry-hover"><span>View on Instagram</span></div>
-                </div>
-            </a>
-            <div class="item-info">
-                <h3>Campus Spirit</h3>
-                <p>UGC-style Reel showcasing authentic campus culture and engagement.</p>
-            </div>
+    <div class="embed-container">
+    <div class="embed-card">
         </div>
 
+    <div class="embed-card">
         </div>
+
+    </div>
+
+<style>
+    .embed-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 0;
+    }
+
+    .embed-card {
+        width: 100%;
+        max-width: 400px; /* Limits width so they don't look huge on desktop */
+        min-width: 320px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    /* This ensures the Instagram frame fits the card perfectly */
+    .instagram-media {
+        margin: 0 !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+    }
+</style>
+
 </div>
 
 </body>
