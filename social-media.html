@@ -9,59 +9,38 @@
             --charcoal: #2d2d2d;
             --forest-green: #1b4332;
             --white: #ffffff;
-            --soft-grey: #f4f4f4;
         }
 
-        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: var(--white); }
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #fdfdfd; }
 
         nav { background: var(--charcoal); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
         nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
 
         .back-link { display: inline-block; margin: 30px; text-decoration: none; color: var(--forest-green); font-weight: bold; font-size: 0.9rem; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        .page-header { text-align: center; margin-bottom: 60px; }
+        .page-header { text-align: center; margin-bottom: 40px; padding: 0 20px; }
         .page-header h1 { font-family: 'Georgia', serif; font-size: 3rem; color: var(--forest-green); margin-bottom: 10px; }
         .page-header p { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: #666; }
 
-        /* Masonry Grid Logic */
-        .masonry-grid {
-            column-count: 3;
-            column-gap: 20px;
+        /* The Live Feed Grid */
+        .embed-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 25px;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: 0.3s ease;
+        .embed-card {
+            width: 100%;
+            max-width: 350px; /* Perfect size for Reels/Posts */
+            min-height: 500px; /* Prevents layout jump while loading */
         }
 
-        .masonry-item:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
-
-        .masonry-image-wrapper { position: relative; overflow: hidden; }
-        .masonry-image-wrapper img { width: 100%; display: block; transition: 0.5s; }
-        
-        .masonry-hover {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(27, 67, 50, 0.85); /* Forest Green Overlay */
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: 0.3s;
-        }
-
-        .masonry-item:hover .masonry-hover { opacity: 1; }
-        .masonry-hover span { color: white; font-weight: bold; border: 2px solid white; padding: 10px 20px; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; }
-
-        .item-info { padding: 15px; }
-        .item-info h3 { margin: 0; font-family: 'Georgia', serif; font-size: 1.1rem; color: var(--forest-green); }
-        .item-info p { margin: 5px 0 0; font-size: 0.85rem; color: #777; line-height: 1.4; }
-
-        @media (max-width: 900px) { .masonry-grid { column-count: 2; } }
-        @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+        /* Footer to match your homepage */
+        footer { background: #f9f9f9; padding: 25px 0; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; margin-top: 60px; }
     </style>
 </head>
 <body>
@@ -74,48 +53,62 @@
 
 <a href="portfolio.html" class="back-link">← BACK TO HUB</a>
 
-<div class="container">
-    <header class="page-header">
-        <h1>Digital Storytelling</h1>
-        <p>Short-form video & Strategic Engagement</p>
-    </header>
+<header class="page-header">
+    <h1>Digital Storytelling</h1>
+    <p>Live Engagement & Content Strategy</p>
+</header>
 
-    <div class="embed-container">
+<div class="embed-container">
     <div class="embed-card">
-        </div>
-
-    <div class="embed-card">
-        </div>
-
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW5XSe6kU3m/" data-instgrm-version="14"></blockquote>
     </div>
 
-<style>
-    .embed-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        padding: 40px 0;
-    }
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW4-DrWhr7x/" data-instgrm-version="14"></blockquote>
+    </div>
 
-    .embed-card {
-        width: 100%;
-        max-width: 400px; /* Limits width so they don't look huge on desktop */
-        min-width: 320px;
-        background: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
-    /* This ensures the Instagram frame fits the card perfectly */
-    .instagram-media {
-        margin: 0 !important;
-        border-radius: 12px !important;
-        width: 100% !important;
-    }
-</style>
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVr-DOXjO24/" data-instgrm-version="14"></blockquote>
+    </div>
 
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVmuepnDPFD/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DU_8ZYnjcFj/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUy92cnDXla/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUt7HkWDEct/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT6q40YDaMt/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS6O8SVjavo/" data-instgrm-version="14"></blockquote>
+    </div>
+
+    <div class="embed-card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSp4C1ljSr9/" data-instgrm-version="14"></blockquote>
+    </div>
 </div>
+
+<footer>
+    &copy; <span id="year"></span> Parker Kelson. All Rights Reserved.
+</footer>
+
+<script async src="//www.instagram.com/embed.js"></script>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
