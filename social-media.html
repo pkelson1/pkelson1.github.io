@@ -41,6 +41,34 @@
 
         /* Footer to match your homepage */
         footer { background: #f9f9f9; padding: 25px 0; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; margin-top: 60px; }
+
+            .embed-container {
+        display: flex;
+        flex-direction: column; /* Stack the rows vertically */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .embed-row {
+        display: flex;
+        justify-content: center; /* Centers the items in the row */
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .centered-row {
+        /* This ensures that when there are only 2, they sit in the 'gaps' of the 3 above */
+        max-width: 800px; /* Adjust this to be roughly the width of 2.5 cards */
+        margin: 0 auto;
+    }
+
+    .embed-card {
+        width: 100%;
+        max-width: 350px;
+        min-height: 500px;
+    }
+
     </style>
 </head>
 <body>
@@ -59,61 +87,43 @@
 </header>
 
 <div class="embed-container">
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW5XSe6kU3m/" data-instgrm-version="14"></blockquote>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQexoALjSo7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQkAF5ICVZG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DRVDXazj2_p/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSL77jlDbKO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSp4C1ljSr9/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS6O8SVjavo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT6q40YDaMt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUt7HkWDect/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+    <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUy92cnDXla/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14"></blockquote></div>
+
+    <div class="embed-row">
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DU_8ZYnjcFj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVmuepnDPFD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVr-DOXjO24/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
     </div>
 
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW4-DrWhr7x/" data-instgrm-version="14"></blockquote>
+    <div class="embed-row centered-row">
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW4-DrWhr7x/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
+        <div class="embed-card"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DW5XSe6kU3m/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="></blockquote></div>
     </div>
 
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVr-DOXjO24/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVmuepnDPFD/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DU_8ZYnjcFj/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUy92cnDXla/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUt7HkWDEct/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DT6q40YDaMt/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DS6O8SVjavo/" data-instgrm-version="14"></blockquote>
-    </div>
-
-    <div class="embed-card">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSp4C1ljSr9/" data-instgrm-version="14"></blockquote>
-    </div>
 </div>
-
-<footer>
-    &copy; <span id="year"></span> Parker Kelson. All Rights Reserved.
-</footer>
 
 <script async src="//www.instagram.com/embed.js"></script>
 <script>
-    // This forces Instagram to "re-scan" the page if it missed the posts the first time
+    // Force Instagram to process the embeds even on a slow connection
     window.onload = function() {
         if (window.instgrm) {
             window.instgrm.Embeds.process();
         }
     };
+    // Ensure this script also runs the year update
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 
 
 </body>
