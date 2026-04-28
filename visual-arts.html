@@ -57,7 +57,16 @@
             transition: background 0.3s ease;
         }
 
-        .category-card:hover .overlay { background: rgba(27, 67, 50, 0.6); /* Forest Green tint on hover */ }
+         /* ... (keep your existing :root and nav styles) ... */
+
+    .category-card:hover .overlay { 
+        background: rgba(0, 0, 0, 0.2); /* Much lighter, just enough to make text pop */
+    }
+
+    .category-card:hover .bg-img { 
+        transform: scale(1.08); /* Slightly more zoom for that premium feel */
+        filter: brightness(1.1); /* Subtle "light up" effect instead of green tint */
+    }
 
         .content {
             position: relative;
@@ -97,12 +106,11 @@
 </nav>
 
 <div class="gallery-hub">
-    <a href="aerial.html" class="category-card">
-        <div class="bg-img" style="background-image: url('images/aerial/cover-aerial.webp');"></div>
+    <a href="landscapes.html" class="category-card">
+        <div class="bg-img" style="background-image: url('images/landscapes/cover-landscape.webp');"></div>
         <div class="overlay"></div>
         <div class="content">
-            <h2>Aerial</h2>
-            <p>Perspectives from above</p>
+            <h2>Landscapes</h2>
         </div>
     </a>
 
@@ -111,16 +119,14 @@
         <div class="overlay"></div>
         <div class="content">
             <h2>Portraits</h2>
-            <p>Capturing the individual</p>
         </div>
     </a>
 
-    <a href="landscapes.html" class="category-card">
-        <div class="bg-img" style="background-image: url('images/landscapes/cover-landscape.webp');"></div>
+    <a href="aerial.html" class="category-card">
+        <div class="bg-img" style="background-image: url('images/aerial/cover-aerial.webp');"></div>
         <div class="overlay"></div>
         <div class="content">
-            <h2>Landscapes</h2>
-            <p>Nature & Environment</p>
+            <h2>Aerial</h2>
         </div>
     </a>
 </div>
