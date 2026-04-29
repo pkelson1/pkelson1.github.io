@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Parker Kelson</title>
+    <style>
+        :root {
+            --charcoal: #2d2d2d;
+            --forest-green: #1b4332;
+            --white: #ffffff;
+        }
+
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #f4f4f4; color: var(--charcoal); line-height: 1.6; }
+
+        nav { background: var(--charcoal); padding: 1.5rem 0; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+
+        .resume-paper {
+            max-width: 850px;
+            margin: 50px auto;
+            background: white;
+            padding: 60px 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .resume-header { text-align: center; border-bottom: 2px solid var(--forest-green); padding-bottom: 20px; margin-bottom: 30px; }
+        .resume-header h1 { margin: 0; font-family: 'Georgia', serif; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; }
+        .resume-header p { margin: 5px 0; font-size: 0.9rem; color: #666; }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            background: var(--forest-green);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #eee; padding-bottom: 5px; color: var(--forest-green); margin-top: 30px; }
+        
+        .job-block { margin-bottom: 20px; }
+        .job-header { display: flex; justify-content: space-between; font-weight: bold; margin-bottom: 5px; }
+        .job-title { font-style: italic; color: #555; }
+        
+        ul { padding-left: 20px; margin: 10px 0; }
+        li { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+        .skills-grid li { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .resume-paper { padding: 40px 20px; margin: 20px; }
+            .job-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="contact.html">CONTACT</a>
+</nav>
+
+<div class="resume-paper">
+    <div class="resume-header">
+        <h1>Parker Kelson</h1>
+        <p>Beaverton, OR 97003 | 971-329-9683 | parkerkelson@yahoo.com</p>
+        <a href="assets/Parker_Kelson_Resume.pdf" class="download-btn" download>Download PDF Version</a>
+    </div>
+
+    <h2>Profile</h2>
+    <p>Digital storyteller and media creator who captures authentic moments and transforms them into impactful social content. Experienced in photography, video production and social strategy, with a professional focus on design and visual narrative.</p>
+
+    <h2>Education</h2>
+    <div class="job-block">
+        <div class="job-header">
+            <span>Valparaiso University | Valparaiso, Ind.</span>
+            <span>Expected May 2026</span>
+        </div>
+        <div class="job-title">Bachelor of Arts in Digital Media Arts | GPA: 3.43</div>
+    </div>
+
+    <h2>Relevant Experience</h2>
+
+    <div class="job-block">
+        <div class="job-header">
+            <span>Valparaiso University Marketing</span>
+            <span>Aug. 2025 – Present</span>
+        </div>
+        <div class="job-title">Student Content Creator</div>
+        <ul>
+            <li>Develops user-generated content for organic and paid campaigns across university channels.</li>
+            <li>Produces video content aligned with current digital trends and university branding.</li>
+            <li>Conducts market research to support strategic marketing initiatives and content development.</li>
+        </ul>
+    </div>
+
+    <div class="job-block">
+        <div class="job-header">
+            <span>Valparaiso University Student Life</span>
+            <span>July 2025 – Present</span>
+        </div>
+        <div class="job-title">Marketing Assistant</div>
+        <ul>
+            <li>Manages social media channels by creating and curating content reflecting the student experience.</li>
+            <li>Co-manages campus-wide newsletters by aggregating content from various campus partners.</li>
+            <li>Designs promotional materials for physical display within the student union.</li>
+        </ul>
+    </div>
+
+    <h2>Leadership</h2>
+
+    <div class="job-block">
+        <div class="job-header">
+            <span>Sigma Chi Fraternity (Iota Sigma Chapter)</span>
+            <span>April 2023 – Present</span>
+        </div>
+        <div class="job-title">Annotator and PR Chair</div>
+        <ul>
+            <li>Maintains executive board minutes and organizes all official chapter reports.</li>
+            <li>Manages the chapter’s Instagram presence, including graphic design and photography.</li>
+            <li>Coordinates a comprehensive chapter-wide master calendar.</li>
+        </ul>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <ul class="skills-grid">
+        <li>Final Cut Pro</li>
+        <li>Canva</li>
+        <li>DSLR Photography</li>
+        <li>Social Media Strategy</li>
+        <li>UGC Production</li>
+    </ul>
+</div>
+
+</body>
+</html>
