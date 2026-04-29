@@ -20,7 +20,7 @@
             max-width: 850px;
             margin: 50px auto;
             background: white;
-            padding: 60px 80px;
+            padding: 30px 50px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
@@ -52,24 +52,37 @@
         li { margin-bottom: 5px; font-size: 0.95rem; }
 
         .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-        .skills-grid li { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+        .skills-grid li { background: #eee; padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
 
         @media (max-width: 768px) {
             .resume-paper { padding: 40px 20px; margin: 20px; }
             .job-header { flex-direction: column; }
         }
 
-        @media print {
-    nav, .download-btn {
+       @media print {
+    /* Hide the web-only elements so they don't show up on the paper */
+    nav, .download-btn, footer {
         display: none !important;
     }
+
+    /* Reset the "paper" to fill the whole page */
     body {
-        background: white;
-    }
-    .resume-paper {
+        background: white !important;
         margin: 0;
-        box-shadow: none;
         padding: 0;
+    }
+
+    .resume-paper {
+        margin: 0 auto;
+        padding: 20px; /* Adjust for standard printer margins */
+        box-shadow: none; /* Removes the "shadow" look from the website */
+        width: 100%;
+    }
+
+    /* Ensure colors (like the Forest Green) show up on paper */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 }
 
