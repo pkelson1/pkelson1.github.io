@@ -134,84 +134,102 @@
 </head>
 <body>
 
-<nav>
+    <nav>
     <a href="index.html">HOME</a>
     <a href="portfolio.html">PORTFOLIO</a>
     <a href="contact.html">CONTACT</a>
 </nav>
-    
-    <div class="contact-info">
-    <div class="profile-frame">
-        <img src="images/me.webp" alt="Parker Kelson">
-    </div>
 
-<div class="contact-container">
-    <div class="contact-info">
-        <div class="profile-frame">
-            <img src="images/parker-headshot.webp" alt="Parker Kelson">
-        </div>
-
-        <h1>Strategic Content & Narrative Design</h1>
-        <p>Currently based in Beaverton, OR. I focus on high-impact digital storytelling and content logistics. If you’re looking to bridge the gap between creative vision and measurable social strategy, let’s talk.</p>
+<div class="contact-wrapper">
+    <div class="contact-grid">
         
-        <div class="social-links">
-            <a href="mailto:parkerkelson@yahoo.com">Direct Email →</a>
-            <a href="https://linkedin.com/in/parkerkelson" target="_blank">LinkedIn →</a>
-            <a href="resume.html">Review Professional Resume →</a>
-            <a href="assets/parker-kelson.vcf" download>Save Contact Card →</a>
+        <div class="info-side">
+            <div class="profile-circle">
+                <img src="images/parker-headshot.webp" alt="Parker Kelson">
+            </div>
+            
+ <h1>Digital Media & Narrative Strategy</h1>
+    <p>
+        I am a Digital Media Arts student at Valparaiso University with a focus on photography, 
+        video production, and social strategy. I’m interested in how authentic storytelling 
+        can build communities—from university marketing initiatives to student life engagement. 
+    </p>
+            
+            <div class="links-stack">
+                <a href="mailto:parkerkelson@yahoo.com">Direct Email →</a>
+                <a href="https://linkedin.com/in/parkerkelson" target="_blank">LinkedIn Connection →</a>
+                <a href="resume.html">Review Professional Resume →</a>
+                <a href="assets/parker-kelson.vcf" download>Save Contact Card →</a>
+            </div>
         </div>
-    </div>
 
-    <div class="contact-form">
-        <form action="https://formspree.io/f/mrernavo" method="POST">
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" name="name" required>
-            </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label>Project Details / Inquiry</label>
-                <textarea name="message" rows="5" required></textarea>
-            </div>
-            <input type="hidden" name="_next" value="https://parkerkelson.github.io/index.html">
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-</div>
+        <div class="form-side">
+            <form action="https://formspree.io/f/mrernavo" method="POST" class="styled-form">
+                <div class="input-group">
+                    <label>Name</label>
+                    <input type="text" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label>Inquiry Details</label>
+                    <textarea name="message" rows="6" required></textarea>
+                </div>
+                <input type="hidden" name="_next" value="https://pkelson1.github.io/index.html">
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
 
-
-    <div class="contact-form">
-        <form action="https://formspree.io/f/mrernavo" method="POST">
-            <div class="form-group">
-                <label>Your Name</label>
-                <input type="text" name="name" placeholder="Enter your name" required>
-            </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" placeholder="email@example.com" required>
-            </div>
-            <div class="form-group">
-                <label>How can I help?</label>
-                <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
-            </div>
-            
-            <input type="hidden" name="_next" value="https://parkerkelson.github.io/index.html">
-            
-            <button type="submit">Send Message</button>
-        </form>
     </div>
 </div>
 
-<footer>
-    &copy; <span id="year"></span> PARKER KELSON. ALL RIGHTS RESERVED.
-</footer>
+<style>
+    :root { --forest: #1b4332; --charcoal: #2d2d2d; }
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #fdfdfd; color: var(--charcoal); }
 
-<script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    /* Layout Engineering */
+    .contact-wrapper { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .contact-grid { display: flex; gap: 80px; align-items: flex-start; }
+
+    /* Left Column Styles */
+    .info-side { flex: 1; }
+    .profile-circle { 
+        width: 150px; height: 150px; 
+        border-radius: 50%; border: 2px solid var(--forest); 
+        overflow: hidden; margin-bottom: 30px; 
+    }
+    .profile-circle img { width: 100%; height: 100%; object-fit: cover; }
+    
+    h1 { font-family: 'Georgia', serif; font-size: 2.8rem; color: var(--forest); margin: 0 0 20px 0; line-height: 1.1; }
+    p { font-size: 1.1rem; line-height: 1.6; color: #555; margin-bottom: 40px; }
+    
+    .links-stack a { 
+        display: block; margin-bottom: 15px; color: var(--charcoal); 
+        text-decoration: none; font-weight: bold; text-transform: uppercase; 
+        font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s;
+    }
+    .links-stack a:hover { color: var(--forest); padding-left: 5px; }
+
+    /* Form Styles */
+    .form-side { flex: 1; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+    .input-group { margin-bottom: 20px; }
+    .input-group label { display: block; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; margin-bottom: 8px; color: #999; }
+    .input-group input, .input-group textarea { 
+        width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 6px; 
+        background: #f9f9f9; font-family: inherit; box-sizing: border-box; 
+    }
+    .submit-btn { 
+        width: 100%; background: var(--forest); color: white; border: none; 
+        padding: 15px; font-weight: bold; text-transform: uppercase; 
+        border-radius: 6px; cursor: pointer; transition: 0.3s; 
+    }
+    .submit-btn:hover { background: var(--charcoal); }
+
+    @media (max-width: 850px) { .contact-grid { flex-direction: column; gap: 40px; } }
+</style>
+
 
 </body>
 </html>
