@@ -6,89 +6,68 @@
     
     <title>Portfolio | Parker Kelson</title>
     <style>
-        :root {
-            --charcoal: #2d2d2d;
-            --forest-green: #1b4332;
-            --white: #ffffff;
-            --soft-grey: #f4f4f4;
-        }
+        :root { --forest: #1b4332; --charcoal: #2d2d2d; }
+body { margin: 0; font-family: 'Inter', sans-serif; background: #1a1a1a; color: white; }
 
-        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: var(--white); }
-
-        nav { background: var(--charcoal); padding: 1.2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white !important; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; }
-
-        .portfolio-header {
-            padding: 80px 20px 40px;
-            text-align: center;
-            background: var(--soft-grey);
-        }
-
-        .portfolio-header h1 { font-family: 'Georgia', serif; font-size: 3rem; color: var(--forest-green); margin: 0; }
-        .portfolio-header p { text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; color: #666; margin-top: 10px; }
-
-        .portfolio-container {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        /* Styling for the work "cards" */
-        .work-item {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-        .work-item:hover { transform: translateY(-8px); }
-        
-        .work-item img, .work-item video {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-        }
-
-        .work-info { padding: 20px; }
-        .work-info h3 { margin: 0; font-family: 'Georgia', serif; color: var(--forest-green); }
-        .work-info p { margin: 10px 0 0; font-size: 0.9rem; color: #777; }
-
-        footer { background: #f9f9f9; padding: 25px 0; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; }
-  
-        /* MOBILE OPTIMIZATION */
-@media (max-width: 768px) {
-    /* 1. Reset the main sections */
-    .portfolio-section {
-        height: 60dvh !important; /* Dynamic height based on mobile UI */
-        min-height: 400px;        /* Safety floor so it never gets too small */
-    }
-
-    /* 2. Fix the sub-category "strips" (Landscapes, etc.) */
-    .category-banner {
-        height: 25dvh !important; 
-        min-height: 180px;
-        margin-bottom: 2px;
-    }
-
-    /* 3. Center the "Visual Arts" content better */
-    .category-banner h3 {
-        font-size: 1.6rem !important;
-        margin: 0;
-    }
-
-    /* 4. Force background images to center correctly */
-    .portfolio-section, .category-banner {
-        background-attachment: scroll !important; /* 'Fixed' breaks on many mobile browsers */
-        background-position: center center !important;
-        background-size: cover !important;
-    }
+/* 1. Main Banner Sections (Social Media / Visual Arts) */
+.portfolio-section {
+    position: relative;
+    height: 60vh; /* Desktop height */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-  
+/* 2. Sub-Category Banners (Landscapes / Portraits / Aerial) */
+.category-banner {
+    position: relative;
+    height: 300px; /* Desktop height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 768px) {
+    /* Force banners to be taller so they don't squash */
+    .portfolio-section {
+        height: 50dvh !important; /* */
+        background-attachment: scroll !important; /* */
+    }
+
+    /* This is the fix for the thin strips in your screenshot */
+    .category-banner {
+        height: 200px !important; 
+        min-height: 200px !important;
+        background-attachment: scroll !important;
+    }
+
+    .portfolio-section h2 { font-size: 2rem !important; }
+    .category-banner h3 { font-size: 1.5rem !important; }
     
+    /* Make sure text doesn't overlap or hide */
+    .overlay { padding: 15px; text-align: center; }
+}
+
     </style>
     
 </head>
