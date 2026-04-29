@@ -13,12 +13,14 @@
 
         body, html { margin: 0; padding: 0; height: 100%; font-family: 'Inter', sans-serif; background: var(--charcoal); overflow-x: hidden; }
 
-        nav { background: var(--charcoal); padding: 1.5rem 0; text-align: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; }
+        /* Consistent Navigation */
+        nav { background: var(--charcoal); padding: 15px 0; text-align: center; width: 100%; position: relative; z-index: 1000; }
+        nav a { color: white !important; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
+        /* The Hub Container - Using DVH to prevent mobile squash */
         .gallery-hub {
             display: flex;
-            height: calc(100vh - 75px); /* Adjust based on nav height */
+            height: calc(100dvh - 50px); 
             width: 100%;
         }
 
@@ -31,23 +33,23 @@
             align-items: center;
             justify-content: center;
             transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-            border-right: 1px solid rgba(255,255,255,0.1);
         }
 
-        .category-card:last-child { border-right: none; }
-
-        .category-card:hover { flex: 1.5; }
+        /* Hover Effect for Desktop */
+        @media (min-width: 769px) {
+            .category-card:hover { flex: 1.5; }
+            .category-card:hover .bg-img { transform: scale(1.08); filter: brightness(1.1); }
+            .category-card:hover .overlay { background: rgba(0, 0, 0, 0.2); }
+        }
 
         .bg-img {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             background-size: cover;
             background-position: center;
-            transition: transform 0.6s ease;
+            transition: transform 0.6s ease, filter 0.3s ease;
             z-index: 1;
         }
-
-        .category-card:hover .bg-img { transform: scale(1.05); }
 
         .overlay {
             position: absolute;
@@ -56,17 +58,6 @@
             z-index: 2;
             transition: background 0.3s ease;
         }
-
-         /* ... (keep your existing :root and nav styles) ... */
-
-    .category-card:hover .overlay { 
-        background: rgba(0, 0, 0, 0.2); /* Much lighter, just enough to make text pop */
-    }
-
-    .category-card:hover .bg-img { 
-        transform: scale(1.08); /* Slightly more zoom for that premium feel */
-        filter: brightness(1.1); /* Subtle "light up" effect instead of green tint */
-    }
 
         .content {
             position: relative;
@@ -77,23 +68,26 @@
 
         .content h2 {
             font-family: 'Georgia', serif;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin: 0;
             text-transform: capitalize;
             letter-spacing: 2px;
         }
 
-        .content p {
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            font-size: 0.7rem;
-            margin-top: 10px;
-            opacity: 0.8;
-        }
-
+        /* MOBILE RESCUE */
         @media (max-width: 768px) {
-            .gallery-hub { flex-direction: column; height: auto; }
-            .category-card { height: 33.33vh; }
+            .gallery-hub { 
+                flex-direction: column; 
+                height: calc(100dvh - 50px); /* Forces full screen on mobile */
+            }
+            .category-card { 
+                height: 33.33% !important; /* Divides screen into 3 equal parts */
+                flex: none; 
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            .content h2 { font-size: 2rem; }
+            nav a { margin: 0 8px; font-size: 0.7rem; }
         }
     </style>
 </head>
