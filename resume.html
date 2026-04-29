@@ -12,7 +12,22 @@
         .header { text-align: center; border-bottom: 2px solid var(--forest); padding-bottom: 10px; margin-bottom: 20px; }
         h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
         h2 { font-size: 16px; text-transform: uppercase; color: var(--forest); border-bottom: 1px solid #eee; margin-top: 20px; padding-bottom: 5px; }
-        .row { display: flex; justify-content: space-between; font-weight: bold; font-size: 14px; }
+        .row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: baseline;
+    font-weight: bold; 
+    font-size: 14px; 
+    gap: 10px; /* Adds a safety buffer between text and date */
+}
+
+/* Add this new class to keep dates locked to the right */
+.row span:last-child {
+    white-space: nowrap; /* Prevents the date from breaking into two lines */
+    text-align: right;
+    min-width: fit-content;
+}
+
         .title { font-style: italic; color: #555; font-size: 13px; margin-bottom: 5px; }
         ul { margin: 5px 0 15px 20px; padding: 0; }
         li { font-size: 13px; margin-bottom: 3px; }
