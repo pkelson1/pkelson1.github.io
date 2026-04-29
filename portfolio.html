@@ -59,31 +59,34 @@
         footer { background: #f9f9f9; padding: 25px 0; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; }
   
         /* MOBILE OPTIMIZATION */
-@media (max-width: 600px) {
-    /* Give the main banners more vertical room */
+@media (max-width: 768px) {
+    /* 1. Reset the main sections */
     .portfolio-section {
-        height: 300px !important; /* Forces a taller height on mobile */
+        height: 60dvh !important; /* Dynamic height based on mobile UI */
+        min-height: 400px;        /* Safety floor so it never gets too small */
     }
 
-    .portfolio-section h2 {
-        font-size: 2.2rem !important; /* Scale down the text slightly */
-    }
-
-    /* Fix the squashed Visual Arts sub-categories */
+    /* 2. Fix the sub-category "strips" (Landscapes, etc.) */
     .category-banner {
-        height: 180px !important;
-        margin-bottom: 5px;
+        height: 25dvh !important; 
+        min-height: 180px;
+        margin-bottom: 2px;
     }
 
+    /* 3. Center the "Visual Arts" content better */
     .category-banner h3 {
-        font-size: 1.8rem !important;
+        font-size: 1.6rem !important;
+        margin: 0;
     }
 
-    /* Ensure the text doesn't hit the edges */
-    .overlay {
-        padding: 20px;
+    /* 4. Force background images to center correctly */
+    .portfolio-section, .category-banner {
+        background-attachment: scroll !important; /* 'Fixed' breaks on many mobile browsers */
+        background-position: center center !important;
+        background-size: cover !important;
     }
 }
+
   
     
     </style>
