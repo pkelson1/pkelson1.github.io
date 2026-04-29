@@ -9,64 +9,60 @@
         :root { --forest: #1b4332; --charcoal: #2d2d2d; }
 body { margin: 0; font-family: 'Inter', sans-serif; background: #1a1a1a; color: white; }
 
-/* 1. Main Banner Sections (Social Media / Visual Arts) */
+/* 1. NORMALIZE NAV (Fixes the blue links) */
+nav { background: var(--charcoal); padding: 15px 0; text-align: center; width: 100%; position: relative; z-index: 100; }
+nav a { color: white !important; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+
+/* 2. PORTFOLIO BANNERS */
 .portfolio-section {
     position: relative;
-    height: 60vh; /* Desktop height */
+    height: 60dvh; /* Dynamic Height */
+    min-height: 350px;
     background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-position: center center;
+    background-attachment: fixed; /* Desktop only */
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-/* 2. Sub-Category Banners (Landscapes / Portraits / Aerial) */
+/* 3. VISUAL ARTS SUB-CATEGORIES */
 .category-banner {
     position: relative;
-    height: 300px; /* Desktop height */
+    height: 33.33dvh; /* Splits screen into 3 clean parts on mobile */
+    min-height: 200px;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    overflow: hidden;
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
 }
 
-/* --- MOBILE SPECIFIC FIXES --- */
+h2 { font-family: 'Georgia', serif; font-size: 3rem; margin: 0; text-transform: uppercase; }
+h3 { font-family: 'Georgia', serif; font-size: 2rem; margin: 0; color: white; }
+
+/* --- THE MOBILE RESCUE --- */
 @media (max-width: 768px) {
-    /* Force banners to be taller so they don't squash */
-    .portfolio-section {
-        height: 50dvh !important; /* */
-        background-attachment: scroll !important; /* */
-    }
-
-    /* This is the fix for the thin strips in your screenshot */
-    .category-banner {
-        height: 200px !important; 
-        min-height: 200px !important;
+    /* iOS Safari fix for background images */
+    .portfolio-section, .category-banner {
         background-attachment: scroll !important;
+        height: 40dvh !important; /* Ensures visibility */
     }
 
-    .portfolio-section h2 { font-size: 2rem !important; }
-    .category-banner h3 { font-size: 1.5rem !important; }
-    
-    /* Make sure text doesn't overlap or hide */
-    .overlay { padding: 15px; text-align: center; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.5rem !important; }
+
+    nav a { margin: 0 8px; font-size: 0.7rem; }
 }
+
 
     </style>
     
