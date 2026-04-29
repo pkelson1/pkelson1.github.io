@@ -32,7 +32,29 @@
         ul { margin: 5px 0 15px 20px; padding: 0; }
         li { font-size: 13px; margin-bottom: 3px; }
         .skills { font-size: 13px; font-weight: bold; }
-        @media print { nav, .no-print { display: none !important; } .page { margin: 0; box-shadow: none; width: 100%; padding: 20px; } }
+@media print {
+    /* Existing hide logic */
+    nav, .no-print { display: none !important; }
+
+    .page {
+        margin: 0 auto !important;
+        /* This simulates "Scaling" by narrowing the content width */
+        width: 90% !important; 
+        /* Adds a top/bottom buffer so headers don't clip */
+        padding: 0.5in !important; 
+        box-shadow: none !important;
+    }
+
+    /* Fixes potential horizontal clipping on the dates */
+    .row {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+}
+
+
+        
     </style>
 </head>
 <body>
@@ -82,9 +104,9 @@
 
 
     <div class="row">
-        <span>All My Sons Moving & Storage</span>
-        <span>May 2025 – Aug. 2025</span>
-    </div>
+    <div>All My Sons Moving & Storage</div>
+    <div style="text-align: right; white-space: nowrap;">May 2025 – Aug. 2025</div>
+</div>
     <div class="title">Lead Driver and Crew Manager</div>
     <ul>
     <li>Safely operated 26-foot box trucks for residential, storage unit, and high-rise apartment logistics.</li>
