@@ -58,6 +58,21 @@
             .resume-paper { padding: 40px 20px; margin: 20px; }
             .job-header { flex-direction: column; }
         }
+
+        @media print {
+    nav, .download-btn {
+        display: none !important;
+    }
+    body {
+        background: white;
+    }
+    .resume-paper {
+        margin: 0;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
     </style>
 </head>
 <body>
