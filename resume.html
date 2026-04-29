@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Parker Kelson</title>
     <style>
+        /* CORE STYLES */
         :root { --charcoal: #2d2d2d; --forest-green: #1b4332; }
         body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #f4f4f4; color: var(--charcoal); line-height: 1.4; }
 
+        /* NAV - Hidden during Print */
         nav { background: var(--charcoal); padding: 1rem 0; text-align: center; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
 
@@ -15,7 +17,7 @@
             max-width: 800px;
             margin: 30px auto;
             background: white;
-            padding: 40px 50px; /* Reduced padding to save space */
+            padding: 40px 50px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
@@ -34,6 +36,115 @@
             font-size: 0.7rem;
             border-radius: 4px;
             text-transform: uppercase;
+        }
+
+        /* LAYOUT GRID */
+        .top-grid { display: flex; gap: 40px; margin-bottom: 10px; }
+        .grid-left { flex: 2; }
+        .grid-right { flex: 1; }
+
+        h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid #eee; padding-bottom: 3px; color: var(--forest-green); margin: 15px 0 10px 0; }
+        
+        .job-block { margin-bottom: 12px; }
+        .job-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 0.9rem; }
+        .job-title { font-style: italic; color: #555; font-size: 0.85rem; }
+        
+        ul { padding-left: 18px; margin: 5px 0; }
+        li { margin-bottom: 3px; font-size: 0.85rem; }
+
+        .skills-list { font-size: 0.8rem; font-weight: bold; line-height: 1.8; color: #444; }
+
+        /* PRINT LOGIC - This fixes the PDF generation */
+        @media print {
+            nav, .download-btn { display: none !important; }
+            body { background: white !important; }
+            .resume-paper { margin: 0; padding: 20px; box-shadow: none; width: 100%; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">HOME</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="contact.html">CONTACT</a>
+</nav>
+
+<div class="resume-paper">
+    <div class="resume-header">
+        <h1>Parker Kelson</h1>
+        <p>Beaverton, OR 97003 | 971-329-9683 | parkerkelson@yahoo.com</p>
+        <a href="assets/Parker_Kelson_Resume.pdf" class="download-btn" download>Download PDF Version</a>
+    </div>
+
+    <div class="top-grid">
+        <div class="grid-left">
+            <h2>Education</h2>
+            <div class="job-block">
+                <div class="job-header">
+                    <span>Valparaiso University | Valparaiso, Ind.</span>
+                    <span>May 2026</span>
+                </div>
+                <div class="job-title">B.A. in Digital Media Arts | GPA: 3.43</div>
+            </div>
+            <h2>Profile</h2>
+            <p style="font-size: 0.85rem; margin: 0;">Digital storyteller capturing authentic moments through photography, video production and social strategy.</p>
+        </div>
+        <div class="grid-right">
+            <h2>Technical Skills</h2>
+            <div class="skills-list">
+                Final Cut Pro, Canva <br>
+                DSLR Photography <br>
+                Social Media Strategy <br>
+                UGC Production
+            </div>
+        </div>
+    </div>
+
+    <h2>Relevant Experience</h2>
+
+    <div class="job-block">
+        <div class="job-header">
+            <span>Valparaiso University Marketing</span>
+            <span>Aug. 2025 – Present</span>
+        </div>
+        <div class="job-title">Student Content Creator</div>
+        <ul>
+            <li>Develops UGC for organic and paid campaigns across university channels.</li>
+            <li>Produces engaging video content aligned with trends and branding.</li>
+            <li>Performs market research to support strategic content development.</li>
+        </ul>
+    </div>
+
+    <div class="job-block">
+        <div class="job-header">
+            <span>VU Student Life</span>
+            <span>July 2025 – Present</span>
+        </div>
+        <div class="job-title">Marketing Assistant</div>
+        <ul>
+            <li>Manages social channels and curates content reflecting the student experience.</li>
+            <li>Co-manages campus-wide newsletters and designs promotional materials.</li>
+        </ul>
+    </div>
+
+    <div class="job-block">
+        <div class="job-header">
+            <span>All My Sons Moving & Storage</span>
+            <span>May 2025 – Aug. 2025</span>
+        </div>
+        <div class="job-title">Lead Driver and Crew Manager</div>
+        <ul>
+            <li>Operated 26' box trucks for complex residential and commercial logistics.</li>
+            <li>Directed crews and managed customer relations, contracts and payments.</li>
+        </ul>
+    </div>
+
+    <h2>Leadership</h2>
+
+    <div class="job-block">
+        <div
         }
 
         /* The Space Saver: Side-by-Side Education and Skills */
