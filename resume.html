@@ -2,57 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Parker Kelson</title>
     <style>
-        :root { --charcoal: #2d2d2d; --forest-green: #1b4332; }
-        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #f4f4f4; color: var(--charcoal); line-height: 1.3; }
-
-        nav { background: var(--charcoal); padding: 1rem 0; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; }
-
-        .resume-paper {
-            max-width: 800px;
-            margin: 30px auto;
-            background: white;
-            padding: 35px 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-
-        .resume-header { text-align: center; border-bottom: 2px solid var(--forest-green); padding-bottom: 8px; margin-bottom: 12px; }
-        .resume-header h1 { margin: 0; font-family: 'Georgia', serif; font-size: 2rem; text-transform: uppercase; }
-        .resume-header p { margin: 2px 0; font-size: 0.8rem; color: #666; }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 8px;
-            background: var(--forest-green);
-            color: white;
-            text-decoration: none;
-            padding: 6px 14px;
-            font-weight: bold;
-            font-size: 0.65rem;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-
-        h2 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1px solid #eee; padding-bottom: 2px; color: var(--forest-green); margin: 12px 0 8px 0; }
-        
-        .job-block { margin-bottom: 10px; }
-        .job-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 0.85rem; }
-        .job-title { font-style: italic; color: #555; font-size: 0.8rem; }
-        
-        ul { padding-left: 18px; margin: 4px 0; }
-        li { margin-bottom: 2px; font-size: 0.8rem; }
-
-        .skills-list { font-size: 0.8rem; font-weight: bold; color: #444; }
-
-        @media print {
-            nav, .download-btn { display: none !important; }
-            body { background: white !important; }
-            .resume-paper { margin: 0; padding: 0; box-shadow: none; width: 100%; }
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        }
+        :root { --forest: #1b4332; --charcoal: #2d2d2d; }
+        body { font-family: sans-serif; line-height: 1.4; color: var(--charcoal); margin: 0; background: #f4f4f4; }
+        nav { background: var(--charcoal); padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px; }
+        .page { max-width: 800px; margin: 30px auto; background: white; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { text-align: center; border-bottom: 2px solid var(--forest); padding-bottom: 10px; margin-bottom: 20px; }
+        h1 { margin: 0; font-size: 28px; letter-spacing: 1px; }
+        h2 { font-size: 16px; text-transform: uppercase; color: var(--forest); border-bottom: 1px solid #eee; margin-top: 20px; padding-bottom: 5px; }
+        .row { display: flex; justify-content: space-between; font-weight: bold; font-size: 14px; }
+        .title { font-style: italic; color: #555; font-size: 13px; margin-bottom: 5px; }
+        ul { margin: 5px 0 15px 20px; padding: 0; }
+        li { font-size: 13px; margin-bottom: 3px; }
+        .skills { font-size: 13px; font-weight: bold; }
+        @media print { nav, .no-print { display: none !important; } .page { margin: 0; box-shadow: none; width: 100%; padding: 20px; } }
     </style>
 </head>
 <body>
@@ -63,87 +28,64 @@
     <a href="contact.html">CONTACT</a>
 </nav>
 
-<div class="resume-paper">
-    <div class="resume-header">
-        <h1>Parker Kelson</h1>
+<div class="page">
+    <div class="header">
+        <h1>PARKER KELSON</h1>
         <p>Beaverton, OR 97003 | 971-329-9683 | parkerkelson@yahoo.com</p>
-        <a href="assets/Parker_Kelson_Resume.pdf" class="download-btn" download>Download PDF</a>
+        <button class="no-print" onclick="window.print()" style="cursor:pointer; background:var(--forest); color:white; border:none; padding:5px 10px; border-radius:4px; font-size:10px;">PRINT TO PDF</button>
     </div>
 
     <h2>Education</h2>
-    <div class="job-block">
-        <div class="job-header">
-            <span>Valparaiso University | [span_6](start_span)Valparaiso, Ind.[span_6](end_span)</span>
-            [span_7](start_span)<span>May 2026[span_7](end_span)</span>
-        </div>
-        <div class="job-title">B.A. in Digital Media Arts | [span_8](start_span)GPA: 3.43[span_8](end_span)</div>
+    <div class="row">
+        <span>Valparaiso University | Valparaiso, Ind.</span>
+        <span>Expected May 2026</span>
     </div>
+    <div class="title">Bachelor of Arts in Digital Media Arts | GPA: 3.43</div>
 
     <h2>Relevant Experience</h2>
-    <div class="job-block">
-        <div class="job-header">
-            [span_9](start_span)<span>Valparaiso University Marketing[span_9](end_span)</span>
-            <span>Aug. [span_10](start_span)2025 – Present[span_10](end_span)</span>
-        </div>
-        [span_11](start_span)<div class="job-title">Student Content Creator[span_11](end_span)</div>
-        <ul>
-            [span_12](start_span)<li>Develops UGC for organic and paid campaigns across university channels.[span_12](end_span)</li>
-            [span_13](start_span)<li>Produces video content aligned with trends and branding.[span_13](end_span)</li>
-            [span_14](start_span)<li>Performs market research to support strategic content development.[span_14](end_span)</li>
-        </ul>
+    <div class="row">
+        <span>Valparaiso University Marketing</span>
+        <span>Aug. 2025 – Present</span>
     </div>
+    <div class="title">Student Content Creator</div>
+    <ul>
+        <li>Develops UGC for organic and paid campaigns across university channels.</li>
+        <li>Produces engaging video content aligned with trends and branding.</li>
+        <li>Performs market research to support strategic content development.</li>
+    </ul>
 
-    <div class="job-block">
-        <div class="job-header">
-            [span_15](start_span)<span>VU Student Life[span_15](end_span)</span>
-            [span_16](start_span)<span>July 2025 – Present[span_16](end_span)</span>
-        </div>
-        [span_17](start_span)<div class="job-title">Marketing Assistant[span_17](end_span)</div>
-        <ul>
-            [span_18](start_span)<li>Manages social channels and curates content reflecting the student experience.[span_18](end_span)</li>
-            [span_19](start_span)<li>Co-manages campus newsletters and designs promotional materials.[span_19](end_span)</li>
-        </ul>
+    <div class="row">
+        <span>VU Student Life</span>
+        <span>July 2025 – Present</span>
     </div>
+    <div class="title">Marketing Assistant</div>
+    <ul>
+        <li>Manages social channels and curates content reflecting the student experience.</li>
+        <li>Co-manages campus-wide newsletters and designs promotional materials.</li>
+    </ul>
 
-    <div class="job-block">
-        <div class="job-header">
-            [span_20](start_span)<span>All My Sons Moving & Storage[span_20](end_span)</span>
-            [span_21](start_span)<span>May 2025 – Aug. 2025[span_21](end_span)</span>
-        </div>
-        [span_22](start_span)<div class="job-title">Lead Driver and Crew Manager[span_22](end_span)</div>
-        <ul>
-            [span_23](start_span)<li>Operated 26' box trucks for residential and commercial logistics.[span_23](end_span)</li>
-            [span_24](start_span)<li>Directed crews and managed customer relations, contracts and payments.[span_24](end_span)</li>
-        </ul>
+    <div class="row">
+        <span>All My Sons Moving & Storage</span>
+        <span>May 2025 – Aug. 2025</span>
     </div>
+    <div class="title">Lead Driver and Crew Manager</div>
+    <ul>
+        <li>Operated 26-foot box trucks for residential and commercial logistics.</li>
+        <li>Directed crews and managed customer relations, contracts and payments.</li>
+    </ul>
 
     <h2>Leadership</h2>
-    <div class="job-block">
-        <div class="job-header">
-            [span_25](start_span)<span>Sigma Chi Fraternity[span_25](end_span)</span>
-            [span_26](start_span)[span_27](start_span)<span>April 2023 – Dec. 2025[span_26](end_span)[span_27](end_span)</span>
-        </div>
-        [span_28](start_span)<div class="job-title">Annotator & PR Chair[span_28](end_span)</div>
-        <ul>
-            [span_29](start_span)<li>Maintains chapter minutes and manages Instagram presence/photography.[span_29](end_span)</li>
-        </ul>
+    <div class="row">
+        <span>Sigma Chi Fraternity</span>
+        <span>April 2023 – Present</span>
     </div>
-
-    <div class="job-block">
-        <div class="job-header">
-            [span_30](start_span)<span>Interfraternity Council[span_30](end_span)</span>
-            <span>Jan. [span_31](start_span)2024 – Dec. 2024[span_31](end_span)</span>
-        </div>
-        [span_32](start_span)<div class="job-title">VP of Public Relations[span_32](end_span)</div>
-        <ul>
-            [span_33](start_span)<li>Legislated Greek life policy and managed campus promotion/recaps.[span_33](end_span)</li>
-        </ul>
-    </div>
+    <div class="title">Annotator & PR Chair</div>
+    <ul>
+        <li>Maintains chapter minutes and manages Instagram presence and photography.</li>
+    </ul>
 
     <h2>Technical Skills</h2>
-    <div class="skills-list">
-        [span_34](start_span)Final Cut Pro, Canva, Graphic Design, Photography & Videography, Social Media Strategy, UGC Production[span_34](end_span)
-    </div>
+    <p class="skills">Final Cut Pro, Canva, DSLR Photography, Social Media Strategy, UGC Production</p>
 </div>
 
 </body>
