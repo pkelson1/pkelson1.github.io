@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Portfolio | Parker Kelson</title>
     <style>
         :root {
@@ -56,7 +57,37 @@
         .work-info p { margin: 10px 0 0; font-size: 0.9rem; color: #777; }
 
         footer { background: #f9f9f9; padding: 25px 0; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee; }
+  
+        /* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+    /* Give the main banners more vertical room */
+    .portfolio-section {
+        height: 300px !important; /* Forces a taller height on mobile */
+    }
+
+    .portfolio-section h2 {
+        font-size: 2.2rem !important; /* Scale down the text slightly */
+    }
+
+    /* Fix the squashed Visual Arts sub-categories */
+    .category-banner {
+        height: 180px !important;
+        margin-bottom: 5px;
+    }
+
+    .category-banner h3 {
+        font-size: 1.8rem !important;
+    }
+
+    /* Ensure the text doesn't hit the edges */
+    .overlay {
+        padding: 20px;
+    }
+}
+  
+    
     </style>
+    
 </head>
 <body>
 
